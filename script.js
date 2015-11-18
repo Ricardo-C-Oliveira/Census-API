@@ -2,9 +2,9 @@ $(document).ready(function() {
 
   var map = L.map('map').setView([39.739800, -104.911276], 11);
 
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+}).addTo(map);
 
   var sdk = new CitySDK();
   var censusModule = sdk.modules.census;
@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   var layer = new L.geoJson();
   var dataArray = [];
+
   $("#add").click(function() {
     loadingOn();
     var option = $("select").children(":selected").attr("id");
@@ -84,6 +85,7 @@ $(document).ready(function() {
         dataArray.push(data.features[i].properties[option])
       }
 
+      $('#legendTitle').html('Legend')
       $('#leg01').html(' ');
       $('#leg01').html('<span style="background:#ffffd9;"></span>' + ss.min(jenks[0]) + ' - ' + (ss.min(jenks[1]) - 1));
 
