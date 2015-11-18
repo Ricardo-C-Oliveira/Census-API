@@ -16,7 +16,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.0/simple_statistics.min.js"></script>
-  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
   <style media="screen">
     html,
@@ -28,6 +27,12 @@
     }
 
     #map {
+      height: 100vh;
+    }
+
+    #sidebar {
+      background-color: #34495e;
+      color: white;
       height: 100vh;
     }
 
@@ -99,7 +104,7 @@
 
     </div>
     <div id="map" class="col-md-9">
-                  <div id="loading" style="position:absolute; top:350px; left: 250px; background-color: white; text-align: center; width: 100px; height:100px; border-radius: 5px; padding-top: 25px; display:none">Loading...<br/><img src="loading.gif"/></div>
+                  <div id="loading" style="position:absolute; top:50vh; left: 250px; background-color: white; text-align: center; width: 100px; height:100px; border-radius: 5px; padding-top: 25px; display:none">Loading...<br/><img src="loading.gif"/></div>
       <script src="./script.js"></script>
     </div>
   </div>
